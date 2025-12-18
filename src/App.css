@@ -1,0 +1,82 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Room states */
+.dark {
+  background-color: #020617;
+  color: #94a3b8;
+}
+
+.light {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Bulb */
+.bulb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.bulb.on {
+  background-color: #fde047;
+  box-shadow: 0 0 40px #fde047;
+}
+
+.bulb.off {
+  background-color: #1e293b;
+}
+
+/* Button */
+button {
+  padding: 12px 24px;
+  width: 100%;
+  max-width: 140px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #38bdf8;
+  color: #020617;
+  transition: transform 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+  .bulb {
+    width: 90px;
+    height: 90px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 220px;
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .app {
+    gap: 16px;
+    padding: 20px;
+  }
+}
